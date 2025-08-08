@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 
 # Загрузка переменных окружения
 load_dotenv()
+
 # Настройка логирования
 logging.basicConfig(filename='TGBot.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
