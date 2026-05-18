@@ -9,7 +9,7 @@ from fabric import Connection
 
 logging.basicConfig(filename='TGBot.log', level=logging.INFO)
 
-TOKEN = "6440130888:AAEE_QBj0QgBsfCSZx-QtKWaiZYYjyJWyDI"
+TOKEN = "6440"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot=bot)
@@ -71,7 +71,7 @@ async def cmd_show_session(message: types.Message, command: CommandObject):
 async def cmd_pppoe(message: types.Message):
     host = '192.168.0.174'
     user = "tankov"
-    password = "@Adminno.1"
+    password = "@"
     user_id = message.from_user.id
     if user_id == (630071071) or (304882770):
         await bot.send_message(user_id, emoji.emojize(f'Поднимаем сайт :man_technologist:'))
