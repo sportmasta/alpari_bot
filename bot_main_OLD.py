@@ -49,7 +49,7 @@ async def cmd_pppoe(message: types.Message):
 @dp.message(Command('session'))
 async def cmd_show_session(message: types.Message, command: CommandObject):
     user = "cto"
-    password = "@Adminno.1"
+    password = "@"
     user_id = message.from_user.id
     if user_id == (630071071) or (304882770):
         if command.args is None:
