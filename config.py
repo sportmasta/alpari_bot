@@ -1,10 +1,8 @@
 import os
 import sys
 
-# Автоматическое определение режима
 IS_COMPILED = getattr(sys, 'frozen', False)
 
-# Базовые пути
 BASE_DIR = "/opt/telegramBot/telegramBot" if not IS_COMPILED else os.path.dirname(sys.executable)
 
 # Пути к файлам
