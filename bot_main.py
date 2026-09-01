@@ -36,7 +36,6 @@ def load_allowed_users():
 
 ALLOWED_USERS = load_allowed_users()
 
-# Константы
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 BRAS_HOSTS = ['10.10.3.40', '10.10.3.45', '10.10.3.100']
 APACHE_HOST = '192.168.0.174'
@@ -46,7 +45,6 @@ APACHE_USER = "tankov"
 APACHE_PASSWORD = os.getenv("APACHE_PASSWORD")
 ALLOWED_USERS = load_allowed_users()
 
-# Инициализация бота и диспетчера
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot=bot)
 
@@ -62,7 +60,7 @@ def normalize_mac(mac: str) -> str:
     """Конвертирует MAC в формат aa:bb:cc:dd:ee:ff"""
     mac_clean = re.sub(r'[^a-fA-F0-9]', '', mac)
     if len(mac_clean) != 12:
-        return mac  # Если не MAC, возвращаем оригинал
+        return mac  # Если не MAC, возвращаем оригинал строки
     return ':'.join(mac_clean[i:i+2] for i in range(0, 12, 2)).lower()
 
 async def check_host_and_run_command(host, user, password, command, user_id, success_message, error_message):
